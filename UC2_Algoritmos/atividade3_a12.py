@@ -31,7 +31,7 @@ try:
     print(dffatt[["Produto", "Faturamento Total (R$)"]])
 
     # Calculando o menor faturamento total entre os produtos:
-    # Realizando os mesmos passos do maior faturamento!
+    # Realizando os mesmos passos que fizemos para exibir o maior faturamento!
     fattmin = dados["Faturamento Total (R$)"].min()
     dffatm = dados[dados["Faturamento Total (R$)"] == fattmin]
     print("\nPRODUTO COM MENOR FATURAMENTO:")
@@ -40,6 +40,8 @@ try:
     # Filtrando e exibindo apenas valores com baixa satisfação:
     dfsat = dados[dados["Satisfação"] == "Baixo"]
     print("\nPRODUTOS COM BAIXA SATISFAÇÃO:")
+
+    # Printando apenas as colunas específicas (Passando valor como lista)
     print(dfsat[["Produto", "Satisfação"]])
 
 except Exception as e:
